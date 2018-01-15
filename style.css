@@ -1,7 +1,65 @@
-.pomodoro {
-    height: 200px;
-    width: 200px;
-    border: 10px;
+#pomodoro {
+    height: 400px;
+    width: 400px;
+    border: 10px solid white;
     border-radius: 50%;
     background: red;
+    margin: auto;
 }
+
+#leaf {
+    margin: auto;
+    color: green;
+    width: 0px;
+    height: 0px;
+    border-radius: 30%;
+    border-right:  100px solid transparent;
+    border-bottom: 70px  solid green;
+    border-left:   100px solid transparent;
+    -moz-transform:    rotate(50deg);
+    -webkit-transform: rotate(50deg);
+    -ms-transform:     rotate(50deg);
+    -o-transform:      rotate(50deg);
+    }
+
+#leaf:before {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    -webkit-transform: rotate(-35deg);
+    -moz-transform:    rotate(-35deg);
+    -ms-transform:     rotate(-35deg);
+    -o-transform:      rotate(-35deg);
+
+}
+
+#leaf:after {
+    position: absolute;
+    display: block;
+    color: green;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-radius: 30%;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid green;
+    border-left: 100px solid transparent;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform:    rotate(-45deg);
+    -ms-transform:     rotate(-45deg);
+    -o-transform:      rotate(-45deg);
+    content: '';
+    
+}
+
+body {
+    background-color: red;
+}
+
