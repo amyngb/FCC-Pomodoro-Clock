@@ -1,65 +1,63 @@
 #pomodoro {
-    height: 400px;
-    width: 400px;
-    border: 10px solid white;
+    height: 24em;
+    width: 24em;
+    border: 3em solid darkgrey;
     border-radius: 50%;
-    background: red;
+    background: lightgrey;
     margin: auto;
 }
 
-#leaf {
+#session, #break {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    background: lightgrey;
     margin: auto;
-    color: green;
-    width: 0px;
-    height: 0px;
-    border-radius: 30%;
-    border-right:  100px solid transparent;
-    border-bottom: 70px  solid green;
-    border-left:   100px solid transparent;
-    -moz-transform:    rotate(50deg);
-    -webkit-transform: rotate(50deg);
-    -ms-transform:     rotate(50deg);
-    -o-transform:      rotate(50deg);
-    }
-
-#leaf:before {
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-    position: absolute;
-    height: 0;
-    width: 0;
-    top: -45px;
-    left: -65px;
-    display: block;
-    content: '';
-    -webkit-transform: rotate(-35deg);
-    -moz-transform:    rotate(-35deg);
-    -ms-transform:     rotate(-35deg);
-    -o-transform:      rotate(-35deg);
-
 }
 
-#leaf:after {
-    position: absolute;
-    display: block;
-    color: green;
-    top: 3px;
-    left: -105px;
-    width: 0px;
-    height: 0px;
-    border-radius: 30%;
-    border-right: 100px solid transparent;
-    border-bottom: 70px solid green;
-    border-left: 100px solid transparent;
-    -webkit-transform: rotate(-45deg);
-    -moz-transform:    rotate(-45deg);
-    -ms-transform:     rotate(-45deg);
-    -o-transform:      rotate(-45deg);
-    content: '';
-    
+#session {
+    border: 2em solid darkgrey;
 }
 
-body {
-    background-color: red;
+#break {
+    border: 2em solid darkgrey;
+}
+
+.btn {
+    margin: 1em;
+}
+
+#title {
+    background-color: #8e0000;
+    color: lightgrey;  
+    padding: 1em;  
+    margin: 0 0 1em 0;
+}
+
+
+#centerSec {
+    background-color: lightgray;
+    padding: 0;
+}
+
+.container-fluid, body {
+    background-color: darkgray;
+}
+
+footer {
+    background-color: #ff5f52;
+    color: lightgrey;
+    padding: 1em;
+    margin: 3em 0 0 0;
+}
+
+footer a {
+    padding: 2em;
+    text-decoration: none;
+    color: lightgray;
+}
+
+footer h6 {
+    margin: 2em 0;
 }
 
