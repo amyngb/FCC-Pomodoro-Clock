@@ -16,11 +16,19 @@
                     <div class="row">
                         <div class="col-6">
                             <h3>Session</h3>
-                            <div id="session"></div>
+                            <svg  id="session" width="20em" height="20em" viewBox="0 0 20em 20em">
+                                <circle id="session_meter" cx="10em" cy="10em" r="4em" stroke="darkgrey" stroke-width="3em" fill="none"/>
+
+                                <circle id="session_value" cx="10em" cy="10em" r="4em" stroke="#ff5f52" stroke-width="3em" fill="none" stroke-dasharray="25.133em" stroke-dashoffset="34em"/>
+                            </svg>
                         </div>
                         <div class="col-6">
                             <h3>Break</h3>
-                            <div id="break"></div>
+                            <svg  id="break" width="20em" height="20em" viewBox="0 0 20em 20em">
+                                <circle id="break_meter" cx="10em" cy="10em" r="4em" stroke="darkgrey" stroke-width="3em" fill="none"/>
+
+                                <circle id="break_value" cx="10em" cy="10em" r="4em" stroke="#8e0000" stroke-width="3em" fill="none" stroke-dasharray="25.133em" stroke-dashoffset="34em"/>
+                            </svg>
                         </div>
                     </div>
                     <div class="row">
@@ -31,7 +39,11 @@
                             <button class="btn btn-default" href="#"><i class="fa fa-undo"></i></button>
                         </div>                        
                     </div>
-                    <div id=pomodoro></div>
+                    <svg  id="pomodoro" width="40em" height="40em" viewBox="0 0 40em 48em">
+                            <circle id="pomodoro_meter" cx="20em" cy="20em" r="12em" stroke="darkgrey" stroke-width="4em" fill="none"/>
+
+                            <circle id="pomodoro_value" cx="20em" cy="20em" r="12em" stroke="#c62828" stroke-width="4em" fill="none" stroke-dasharray="75.398em" stroke-dashoffset="34em"/>
+                        </svg>
                     <footer> 
                         <div>
                             <a href="#"><i class="fa fa-2x fa-codepen"></i></a>

@@ -1,26 +1,5 @@
-#pomodoro {
-    height: 24em;
-    width: 24em;
-    border: 3em solid darkgrey;
-    border-radius: 50%;
-    background: lightgrey;
-    margin: auto;
-}
-
-#session, #break {
-    height: 10em;
-    width: 10em;
-    border-radius: 50%;
-    background: lightgrey;
-    margin: auto;
-}
-
-#session {
-    border: 2em solid darkgrey;
-}
-
-#break {
-    border: 2em solid darkgrey;
+#break, #session, #pomodoro {
+    transform: rotate(-90deg);
 }
 
 .btn {
@@ -33,7 +12,6 @@
     padding: 1em;  
     margin: 0 0 1em 0;
 }
-
 
 #centerSec {
     background-color: lightgray;
