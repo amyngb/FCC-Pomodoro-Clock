@@ -1,3 +1,9 @@
+
+
+
+
+
+
 var app = new Vue ({
     el: "#app",
     data: [],
@@ -7,9 +13,9 @@ var app = new Vue ({
 
 Vue.use(Vuetify, {
     theme: {
-        primary: '#1976D2',
-        secondary: '#424242',
-        accent: '#82B1FF',
+        primary: '#c62828',
+        secondary: '#ff5f52',
+        accent: '#8e0000',
         error: '#FF5252',
         info: '#2196F3',
         success: '#4CAF50',

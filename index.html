@@ -11,12 +11,41 @@
                 <v-toolbar-title >Pomodoro Timer</v-toolbar-title>
             </v-toolbar>
             <v-container secondary>
+                <v-layout pa-5 row text-xs-center primary xs12 md6 offset-md3>
+                    <v-flex xs6>
+                        <v-flex><h3>Session</h3></v-flex>
+                        <v-layout row justify-center>
+                            <v-btn fab small xs2><v-icon>add_box</v-icon></v-btn>
+                            <div xs3 id="session">25</div>
+                            <v-btn fab small xs2><v-icon>indeterminate_check_box</v-icon></v-btn>
+                        </v-layout>
+                    </v-flex>
+                    <v-flex xs6>
+                        <v-flex><h3>Break</h3></v-flex>       
+                        <v-layout row justify-center>
+                            <v-btn fab small><v-icon>add_box</v-icon></v-btn>
+                            <div id="break">5</div>
+                            <v-btn fab small><v-icon>indeterminate_check_box</v-icon></v-btn>
+                        </v-layout>
+                    </v-flex>
+                </v-layout>
                 <v-layout row text-xs-center primary xs12 md6 offset-md3>
-                    <v-flex column>
-                        <v-btn fab small><v-icon>add_box</v-icon></v-btn>
-                        <div id="session">25</div>
-                        <v-btn fab small><v-icon>indeterminate_check_box</v-icon></v-btn>
-                    
+                    <v-flex xs12>
+                        <v-layout row justify-center>
+                            <v-btn fab id="pomodoro-btn"><h1 id="pomodoro">25:00</h1></v-btn>
+                        </v-layout>
+                    </v-flex>                    
+                </v-layout>
+                <v-layout pa-5 row text-xs-center primary xs12 md6 offset-md3>
+                    <v-flex xs6 offset-xs3>
+                        <v-layout justify-space-around >
+                            <v-flex >
+                                <v-btn fab><v-icon> play_arrow </v-icon></v-btn>
+                            </v-flex>
+                            <v-flex>
+                                <v-btn fab><v-icon> restore </v-icon> </v-btn>
+                            </v-flex>
+                        </v-layout>
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -27,73 +56,5 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vuetify/0.17.6/vuetify.js"></script>
     <script src="script.js"></script>
+    
 </html>
-<!-- <html>
-    <head>
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-        <script src="https://use.fontawesome.com/07532ab91a.js"></script>
-        
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">        
-    </head>
-       
-    <body>
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-6 text-center" id="centerSec">
-                    <h1 id="title">Pomodoro Timer</h1>
-                    <div class="row">
-                        <div class="col-6">
-                            <h3>Session</h3>
-                            <svg  id="session" width="20em" height="20em" viewBox="0 0 20em 20em">
-                                <circle id="session_meter" cx="10em" cy="10em" r="4em" stroke="darkgrey" stroke-width="3em" fill="none"/>
-
-                                <circle id="session_value" cx="10em" cy="10em" r="4em" stroke="#ff5f52" stroke-width="3em" fill="none" stroke-dasharray="25.133em" stroke-dashoffset="34em"/>
-                            </svg>
-                        </div>
-                        <div class="col-6">
-                            <h3>Break</h3>
-                            <svg  id="break" width="20em" height="20em" viewBox="0 0 20em 20em">
-                                <circle id="break_meter" cx="10em" cy="10em" r="4em" stroke="darkgrey" stroke-width="3em" fill="none"/>
-
-                                <circle id="break_value" cx="10em" cy="10em" r="4em" stroke="#8e0000" stroke-width="3em" fill="none" stroke-dasharray="25.133em" stroke-dashoffset="34em"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <button type="button" class="btn btn-default"><i class="fa fa-play"></i></button>
-                        </div>
-                        <div class="col-6">
-                            <button class="btn btn-default" href="#"><i class="fa fa-undo"></i></button>
-                        </div>                        
-                    </div>
-                    <svg  id="pomodoro" width="40em" height="40em" viewBox="0 0 40em 48em">
-                        <circle id="pomodoro_meter" cx="20em" cy="20em" r="12em" stroke="darkgrey" stroke-width="4em" fill="none"/>
-
-                        <circle id="pomodoro_value" cx="20em" cy="20em" r="12em" stroke="#c62828" stroke-width="4em" fill="none" stroke-dasharray="75.398em" stroke-dashoffset="34em"/>
-                    </svg>
-                    <footer> 
-                        <div>
-                            <a href="#"><i class="fa fa-2x fa-codepen"></i></a>
-                            <a href="#"><i class="fa fa-2x fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-2x fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-2x fa-github"></i></a>
-                        </div>
-                        <h6>Designed and coded by Amy Bedinghaus</h6>                 
-                    </footer>
-                </div>
-            </div>
-
-        </div>
-    
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>        
-        <script type= "text/javascript" src="script.js"></script>
-    </body>
-
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
-    
-</html> -->
