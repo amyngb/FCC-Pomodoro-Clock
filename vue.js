@@ -42,18 +42,32 @@ var app = new Vue ({
     computed: {
         Pomodoro: function () {
             var s = this.Session;
-            var pomodoro= {
-                hours: s % 60,
-                minutes: s - (hours * 60),
-                seconds: (s * 60) - (minutes * 60)
+            var p = {
+                hours: s % 60
             } 
-            return pomodoro;
+
+            
+            p.minutes = (s - (p.hours * 60)) % 60;
+            p.seconds = (s * 60 % 60) - (p.minutes * 60);
+            // if (p.seconds == null) {
+            //     p.seconds = "00"
+            // }
+            // if (p.minutes == null) {
+            //     p.minutes = "00"
+            // }
+            if (!p.hours) {
+                return p.minutes + ':' + p.seconds
+            }
+            else
+            return p.hours + ':' + p.minutes + ':' + p.seconds;
         }
         //Session:
         // Clear: window.clearTimeout (this.data.Session)
 
     }
 });
+
+Vue.config.devtools = true;
 
 
 Vue.use(Vuetify, {
