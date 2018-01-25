@@ -15,24 +15,24 @@
                     <v-flex xs6>
                         <v-flex><h3>Session</h3></v-flex>
                         <v-layout row justify-center>
-                            <v-btn fab small xs2><v-icon>add_box</v-icon></v-btn>
-                            <div xs3 id="session">25</div>
-                            <v-btn fab small xs2><v-icon>indeterminate_check_box</v-icon></v-btn>
+                            <v-btn fab small @click="AddToSession"><v-icon>add_box</v-icon></v-btn>
+                            <div v-model="Session" id="session">{{ Session }}</div>
+                            <v-btn fab small @click="SubtractFromSession"><v-icon>indeterminate_check_box</v-icon></v-btn>
                         </v-layout>
                     </v-flex>
                     <v-flex xs6>
                         <v-flex><h3>Break</h3></v-flex>       
                         <v-layout row justify-center>
-                            <v-btn fab small><v-icon>add_box</v-icon></v-btn>
-                            <div id="break">5</div>
-                            <v-btn fab small><v-icon>indeterminate_check_box</v-icon></v-btn>
+                            <v-btn fab small @click="AddToBreakTime"><v-icon>add_box</v-icon></v-btn>
+                            <div v-model="BreakTime" id="breakTime">{{ BreakTime }}</div>
+                            <v-btn fab small @click="SubtractFromBreakTime"><v-icon>indeterminate_check_box</v-icon></v-btn>
                         </v-layout>
                     </v-flex>
                 </v-layout>
                 <v-layout row text-xs-center primary xs12 md6 offset-md3>
                     <v-flex xs12>
                         <v-layout row justify-center>
-                            <v-btn fab id="pomodoro-btn"><h1 id="pomodoro">25:00</h1></v-btn>
+                            <v-btn fab id="pomodoro-btn"><h1 id="pomodoro" v-model="Pomodoro">{{ Pomodoro }}</h1></v-btn>
                         </v-layout>
                     </v-flex>                    
                 </v-layout>
@@ -43,7 +43,7 @@
                                 <v-btn fab><v-icon> play_arrow </v-icon></v-btn>
                             </v-flex>
                             <v-flex>
-                                <v-btn fab><v-icon> restore </v-icon> </v-btn>
+                                <v-btn fab @click="Reset"><v-icon> restore </v-icon> </v-btn>
                             </v-flex>
                         </v-layout>
                     </v-flex>
