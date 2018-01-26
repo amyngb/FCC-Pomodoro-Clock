@@ -3,8 +3,8 @@ var app = new Vue ({
     el: "#app",
     data: {
         Session: 25,
-        BreakTime: 5   
-    },
+        BreakTime: 5
+        },
     methods: {
         AddToSession: function() {
              return this.Session++;
@@ -41,25 +41,33 @@ var app = new Vue ({
     },
     computed: {
         Pomodoro: function () {
+            
+            return this.Session;
+
+        },
+       
+
+        PomodoroTimer: function () {
+            console.log("clicked");
             var s = this.Session;
             var p = {
-                hours: s % 60
-            } 
+                hours: Math.floor(s / 60)
+            }
 
-            
-            p.minutes = (s - (p.hours * 60)) % 60;
-            p.seconds = (s * 60 % 60) - (p.minutes * 60);
+            p.minutes = (s - (p.hours * 60));
+            p.seconds = (s * 60) - (p.minutes * 60);
             // if (p.seconds == null) {
             //     p.seconds = "00"
             // }
             // if (p.minutes == null) {
             //     p.minutes = "00"
             // }
-            if (!p.hours) {
-                return p.minutes + ':' + p.seconds
+            if (p.hours == 0) {
+                return this.Pomodoro = setTimeout (function () {return p.minutes + ':' + p.seconds--}, 1000)
             }
             else
-            return p.hours + ':' + p.minutes + ':' + p.seconds;
+            return this.Pomorodoro = setTimeout (function () {return p.hours + ':' + p.minutes + ':' + p.seconds--}, 1000)
+
         }
         //Session:
         // Clear: window.clearTimeout (this.data.Session)
